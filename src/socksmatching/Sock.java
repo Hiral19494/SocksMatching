@@ -12,14 +12,14 @@ package socksmatching;
 class Sock {
     private String index;
     private String colour;
-    private String position;
+    private String positions;
     private boolean isPaired;
 
     
     public Sock(String index, String colour, String position) {
         this.index = index;
         this.colour = colour;
-        this.position = position;
+        this.positions = position;
     }
 
     public String getIndex() {
@@ -39,11 +39,11 @@ class Sock {
     }
 
     public String getPosition() {
-        return position;
+        return positions;
     }
 
     public void setPosition(String position) {
-        this.position = position;
+        this.positions = position;
     }
 
     public boolean isIsPaired() {

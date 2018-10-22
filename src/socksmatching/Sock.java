@@ -14,7 +14,8 @@ class Sock {
     private String colour;
     private String position;
     private boolean isPaired;
-
+    private String done;
+    
     public Sock(String index, String colour, String position) {
         this.index = index;
         this.colour = colour;

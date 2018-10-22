@@ -22,56 +22,10 @@ public class SocksMatching {
 
     public static String socksString = "1/blue/right,2/blue/right,3/red/right,4/blue/left,5/purple/left,6/red/left,7/green/left,8/red/left,9/blue/left";
 
-    private static String[] commaSeparated;
-  
-    static HashMap map;
-   
-
-    @SuppressWarnings("empty-statement")
-    public static void main(String[] args) {
-
-        map = new HashMap<>();
-
-        commaSeparated = socksString.split(",");
-
-        for (String aCommaSeparated : commaSeparated) {
-
-            String[] tem = aCommaSeparated.split("/");
-
-            map.put(tem[0], tem[1] + "-" + tem[2]);
-
-        }
-
-      
-
-        String one = null, two = null, three = null;
-        List<String> myList = new ArrayList<String>();
-        List<String> myList1 = new ArrayList<String>();
-        List<String> myList2 = new ArrayList<String>();
-        
-        for (int i = 0; i < commaSeparated.length; i++) {
-
-            String[] ff = commaSeparated[i].split("/");
-            one = ff[0];
-            two = ff[1];
-            three = ff[2];
-            myList.add(two);
-            myList1.add(three);
-            myList2.add(one);
-        }
-
-        for (int i = 0; i < myList.size(); i++) {
-
-            for (int k = i + 1; k < myList.size(); k++) {
-
-                if (myList.get(i).equals(myList.get(k)) && !myList1.get(i).equals(myList1.get(k))) {
-                    System.out.println(myList2.get(i) + myList2.get(k));
-                   
-                    i++;      
-                }
-              
-            }
-            i--;       
-        }
+     public static void main(String[] args) {
+        // TODO code application logic here
+        System.out.println("socksString = " + socksString);
+        SockFinder sockFinder = new SockFinder(socksString);
+        sockFinder.findSocks();
     }
 }

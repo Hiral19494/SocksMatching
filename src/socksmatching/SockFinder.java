@@ -11,7 +11,7 @@ import java.util.Comparator;
 
 /**
  *
- * @author Admin
+ * @author Hiral
  */
 class SockFinder {
   
@@ -22,7 +22,7 @@ class SockFinder {
     private ArrayList<Sock> singleSockArrayList;
 
     public SockFinder(String socksString) {
-        if (socksString == null || socksString.trim().equals("")) {
+        if (socksString == null || socksString.trim().equals(" ")) {
             throw new UnsupportedOperationException("Sock string input is not valid");
         }
         this.socksString = socksString;
@@ -68,7 +68,7 @@ class SockFinder {
             }
         }
     }
-
+    
     private void findUnpairedSocks() {
         singleSockArrayList = new ArrayList<>();
         for (Sock sock : sockDataArrayList) {
